@@ -7,9 +7,9 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - id: foo
-        uses: OWNER/hello-world-composite-action@SHA
+        uses: ./.github/actions/hello-world-composite-action
         with:
-          who-to-greet: 'Chitty'
+          who-to-greet: 'Mona the Octocat'
       - run: echo random-number "$RANDOM_NUMBER"
         shell: bash
         env:
